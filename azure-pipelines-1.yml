@@ -1,0 +1,18 @@
+# .azure-pipelines-cd.yml
+resources:
+  pipelines:
+    - pipeline: ciPipeline             # Alias for referencing in jobs
+      source: saipranaygidge.sai              # The name of the CI pipeline (not the YAML file name!)
+      trigger:
+        branches:
+          include:
+            - main
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+jobs:
+  - job: Deploy
+    steps:
+      - script: echo "Deploying after CI..."
+        displayName: 'CD Step'
