@@ -7,6 +7,7 @@ resources:
         branches:
           include:
             - master
+            
 
 trigger: none
 pr: none
