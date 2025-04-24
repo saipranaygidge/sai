@@ -6,7 +6,9 @@ resources:
       trigger:
         branches:
           include:
-            - main
+            - master
+
+trigger: none
 
 pool:
   vmImage: 'ubuntu-latest'
